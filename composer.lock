@@ -610,16 +610,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.3.1",
+            "version": "v4.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "f974f448154928d2b5fb7c412bd23b81d063f34b"
+                "reference": "45d6ef73671995aca565a1aa3d9a432a3ea63f91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/f974f448154928d2b5fb7c412bd23b81d063f34b",
-                "reference": "f974f448154928d2b5fb7c412bd23b81d063f34b",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/45d6ef73671995aca565a1aa3d9a432a3ea63f91",
+                "reference": "45d6ef73671995aca565a1aa3d9a432a3ea63f91",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -688,7 +688,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-06-05T02:08:12+00:00"
+            "time": "2019-06-17T17:37:00+00:00"
         },
         {
             "name": "topthink/framework",
@@ -696,12 +696,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/framework.git",
-                "reference": "2acc4d1846d123099eb7681b062a11a4e07ed837"
+                "reference": "482461553878e7b40dec452117f4fa9f2ade34ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/framework/zipball/2acc4d1846d123099eb7681b062a11a4e07ed837",
-                "reference": "2acc4d1846d123099eb7681b062a11a4e07ed837",
+                "url": "https://api.github.com/repos/top-think/framework/zipball/482461553878e7b40dec452117f4fa9f2ade34ed",
+                "reference": "482461553878e7b40dec452117f4fa9f2ade34ed",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -753,7 +753,7 @@
                 "orm",
                 "thinkphp"
             ],
-            "time": "2019-06-25T03:20:33+00:00"
+            "time": "2019-06-28T09:43:06+00:00"
         },
         {
             "name": "topthink/think-helper",
