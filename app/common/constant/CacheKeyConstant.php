@@ -4,5 +4,5 @@ namespace app\common\constant;
 class CacheKeyConstant
 {
     // 管理员 登录 token key
-    const ADMIN_LOGIN_KEY = "";
+    const ADMIN_LOGIN_KEY = "user:login:";
 }
