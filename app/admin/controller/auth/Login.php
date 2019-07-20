@@ -15,12 +15,11 @@ use app\common\service\auth\LoginService;
 use app\common\utils\PassWordUtils;
 use app\common\vo\ResultVo;
 use app\Request;
-use think\Container;
 
 /**
  * 登录
  */
-class Login extends Base
+class Login
 {
     /**
      * 获取用户信息
