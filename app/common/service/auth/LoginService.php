@@ -18,7 +18,7 @@ class LoginService extends BaseService
      * @param bool $is_login 是否验证用户是否登录
      * @return array|bool 成功返回用户信息，否则返回 false
      */
-    public function loginInfo($id, $values,$is_login = true)
+    public static function loginInfo($id, $values,$is_login = true)
     {
         $redis = RedisUtils::init();
         $key = CacheKeyConstant::ADMIN_LOGIN_KEY . $id;
@@ -37,6 +37,11 @@ class LoginService extends BaseService
                 return $info;
             }
             if (!empty($info['id']) && !empty($info['token']) && $info['token'] == $values){
+                //判断当前token解密之后是否为当前登录的用户
+                $decodeToken = TokenUtils::decode($values);
+                if($id != $decodeToken->id){
+                    return false;
+                }
                 $info['authRules'] = isset($info['authRules']) ? json_decode($info['authRules']) : '';
                 return $info;
             }
@@ -53,6 +58,11 @@ class LoginService extends BaseService
                 return $info;
             }
             if (!empty($info['id']) && !empty($info['token']) && $info['token'] == $values){
+                //判断当前token解密之后是否为当前登录的用户
+                $decodeToken = TokenUtils::decode($values);
+                if($id != $decodeToken->id){
+                    return false;
+                }
                 return $info;
             }
         }

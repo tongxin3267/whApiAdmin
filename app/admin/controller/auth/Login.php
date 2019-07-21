@@ -70,8 +70,7 @@ class Login
         $info['authRules'] = $authRules;
 
         // 保存用户信息
-        $loginService = new LoginService();
-        $loginInfo = $loginService->loginInfo($info['id'], $info);
+        $loginInfo = LoginService::loginInfo($info['id'], $info);
 
         //登录时间以及ip入库。
         $admin->last_login_ip = request()->ip();

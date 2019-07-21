@@ -2,11 +2,12 @@
 namespace app\admin\controller\auth;
 
 use app\admin\controller\BaseCheckUser;
+use app\Request;
 
 class Role extends BaseCheckUser
 {
-    public function index()
+    public function index(Request $request)
     {
-        dump(1);
+        dump($request->userInfo);
     }
 }

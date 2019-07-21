@@ -11,8 +11,8 @@ use Firebase\JWT\JWT;
 class TokenUtils
 {
     private static $key = 'wenhao';
-    private static $iss = "http://www.wenhao.com";//签发者
-    private static $aud = "http://wenhao.com";//接受者
+    private static $iss = "wenhao";//签发者
+    private static $aud = "www.whapiadmin.com";//接受者
     public static function create($id,$username,$time = 86400)
     {
         $token = [
@@ -36,13 +36,13 @@ class TokenUtils
             }
             return $decodeResult;
         }catch(\Firebase\JWT\SignatureInvalidException $e) { //签名不正确
-            return Responses::arrays('签名错误',1);
+            return ResultVo::error(ErrorCode::AUTH_FAILED,'签名错误');
         }catch(\Firebase\JWT\BeforeValidException $e) { //
             return Responses::arrays($e->getMessage(),1);
         }catch(\Firebase\JWT\ExpiredException $e) { // token过期
-            return Responses::arrays('登录凭证失效',-1);
+            return ResultVo::error(ErrorCode::AUTH_FAILED,'登录凭证失效');
         }catch(Exception $e) { //其他错误
-            return Responses::arrays($e->getMessage());
+            return ResultVo::error(ErrorCode::AUTH_FAILED,$e->getMessage());
         }
 
     }
