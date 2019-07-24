@@ -2,11 +2,8 @@
 
 namespace app\common\middleware;
 
-use app\admin\controller\BaseCheckUser;
 use app\common\enums\ErrorCode;
-use app\common\exception\JsonException;
 use app\common\service\auth\LoginService;
-use app\common\utils\TokenUtils;
 use app\common\vo\ResultVo;
 
 class CheckUser
